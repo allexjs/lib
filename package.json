@@ -1,0 +1,58 @@
+{
+  "name": "allexlib",
+  "version": "1.0.0",
+  "description": "AllexJS basic library",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allexjs/lib.git"
+  },
+  "dependencies": {
+    "allex_avltreelowlevellib": "1.x",
+    "allex_checkslowlevellib": "1.x",
+    "allex_deferfifolowlevellib": "1.x",
+    "allex_defermaplowlevellib": "^1.0.0",
+    "allex_destroyablemixinslowlevellib": "2.x",
+    "allex_destructionlowlevellib": "3.x",
+    "allex_dicontainerlowlevellib": "2.x",
+    "allex_doublelinkedlistbaselowlevellib": "1.x",
+    "allex_doublelinkedlistlowlevellib": "1.x",
+    "allex_errorlowlevellib": "1.x",
+    "allex_eventemitterlowlevellib": "2.x",
+    "allex_fifolowlevellib": "1.x",
+    "allex_jsonizingerrorlowlevellib": "1.x",
+    "allex_stringbufferlowlevellib": "1.x",
+    "allex_functionmanipulationlowlevellib": "1.x",
+    "allex_httprequestlowlevellib": "1.x",
+    "allex_inheritlowlevellib": "1.x",
+    "allex_isidenticallowlevellib": "1.x",
+    "allex_listenablemaplowlevellib": "2.x",
+    "allex_macaddresslowlevellib": "1.x",
+    "allex_maplowlevellib": "1.x",
+    "allex_modulerecognitionlowlevellib": "1.x",
+    "allex_notanallexerrorerrorlowlevellib": "1.x",
+    "allex_objectmanipulationlowlevellib": "3.x",
+    "allex_propertymixinslowlevellib": "2.x",
+    "allex_qextlowlevellib": "2.x",
+    "allex_qlowlevellib": "1.x",
+    "allex_singlelinkedlistlowlevellib": "1.x",
+    "allex_stringmanipulationlowlevellib": "3.x",
+    "allex_timeoutlowlevellib": "1.x",
+    "allex_uidlowlevellib": "1.x",
+    "jsonschema": "1.x"
+  },
+  "keywords": [
+    "ecosystem:AllexJS",
+    "basic",
+    "lib"
+  ],
+  "author": "Andrija Petrovic <andrija.hers@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allexjs/lib/issues"
+  },
+  "homepage": "https://github.com/allexjs/lib#readme"
+}
