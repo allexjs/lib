@@ -108,7 +108,7 @@ var toExport = {
   ListenableMap: listenablemap,
   request: require('allex_httprequestlowlevellib')(objmanip.traverseShallow, checkftions.isFunction, functionmanip.dummyFunc),
   DIContainer : DIContainer,
-  moduleRecognition: require('allex_modulerecognitionlowlevellib'),
+  moduleRecognition: require('allex_modulerecognitionlowlevellib')(checkftions.isString, checkftions.isFunction, q, qlib),
   capitalize : stringmanip.capitalize
 };
 

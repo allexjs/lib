@@ -1,6 +1,6 @@
 {
   "name": "allexlib",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "AllexJS basic library",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "allex_listenablemaplowlevellib": "2.x",
     "allex_macaddresslowlevellib": "1.x",
     "allex_maplowlevellib": "1.x",
-    "allex_modulerecognitionlowlevellib": "1.x",
+    "allex_modulerecognitionlowlevellib": "2.x",
     "allex_notanallexerrorerrorlowlevellib": "1.x",
     "allex_objectmanipulationlowlevellib": "3.x",
     "allex_propertymixinslowlevellib": "2.x",
