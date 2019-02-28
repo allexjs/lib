@@ -41,6 +41,7 @@ var toExport = {
   traverse:objmanip.traverse,
   traverseConditionally:objmanip.traverseConditionally,
   extend:objmanip.extend,
+  extendWithConcat:objmanip.extendWithConcat,
   extendShallow:objmanip.extendShallow,
   pick:objmanip.pick,
   pickExcept:objmanip.pickExcept,
