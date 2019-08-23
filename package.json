@@ -1,6 +1,6 @@
 {
   "name": "allexlib",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "AllexJS basic library",
   "main": "index.js",
   "scripts": {
@@ -37,7 +37,7 @@
     "allex_objectmanipulationlowlevellib": "3.x",
     "allex_propertymixinslowlevellib": "2.x",
     "allex_qextlowlevellib": "2.x",
-    "allex_qlowlevellib": "1.x",
+    "allex_qlowlevellib": "2.x",
     "allex_singlelinkedlistlowlevellib": "1.x",
     "allex_stringmanipulationlowlevellib": "3.x",
     "allex_timeoutlowlevellib": "1.x",
