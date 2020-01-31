@@ -75,6 +75,7 @@ var toExport = {
   prependToString: stringmanip.prependToString,
   thousandSeparate : stringmanip.thousandSeparate,
   readPropertyFromDotDelimitedString: stringmanip.readPropertyFromDotDelimitedString,
+  writePropertyFromDotDelimitedString: stringmanip.writePropertyFromDelimitedString,
   toIndentedJson : stringmanip.toIndentedJson,
   querystring : stringmanip.querystring,
   getMac: maclib.getMac,
