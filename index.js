@@ -4,7 +4,7 @@ var
   checkftions = require('allex_checkslowlevellib'),
   cleanftions = require('allex_destructionlowlevellib')(checkftions.isFunction, checkftions.isArray, checkftions.isNumber, checkftions.isString),
   inherit = require('allex_inheritlowlevellib'),
-  slist = require('allex_singlelinkedlistlowlevellib'),
+  slist = require('allex_singlelinkedlistlowlevellib')(inherit.inherit),
   maclib = require('allex_macaddresslowlevellib')(checkftions.isFunction, checkftions.isArray),
   stringmanip = require('allex_stringmanipulationlowlevellib')(checkftions.isString, checkftions.isNull),
   objmanip = require('allex_objectmanipulationlowlevellib')(checkftions),
@@ -12,7 +12,7 @@ var
   AllexError = require('allex_errorlowlevellib')(inherit.inherit),
   AllexJSONizingError = require('allex_jsonizingerrorlowlevellib')(AllexError,inherit.inherit),
   NotAnAllexErrorError = require('allex_notanallexerrorerrorlowlevellib')(AllexError,inherit.inherit),
-  dlinkedlistbase = require('allex_doublelinkedlistbaselowlevellib'),
+  dlinkedlistbase = require('allex_doublelinkedlistbaselowlevellib')(inherit.inherit),
   fifo = require('allex_fifolowlevellib')(dlinkedlistbase, inherit.inherit),
   stringbuffer = require('allex_stringbufferlowlevellib')(fifo),
   timeout = require('allex_timeoutlowlevellib')(checkftions.isFunction, fifo),
@@ -28,6 +28,25 @@ var
   qlib = require('allex_qextlowlevellib')(q, inherit.inherit, timeout.runNext, fifo, map, cleanftions.containerDestroyAll),
   listenablemap = require('allex_listenablemaplowlevellib')(map, eventemitter, inherit.inherit, timeout.runNext, checkftions.isArray, checkftions.defined, checkftions.isDefinedAndNotNull, cleanftions.containerDestroyDeep, cleanftions.arryDestroyAll),
   DIContainer = require('allex_dicontainerlowlevellib')(map, defermap, listenablemap, q, qlib, cleanftions.containerDestroyAll);
+
+var shouldClose = new eventemitter();
+function onSignal (signal) {
+  if (checkftions.isString(signal)) {
+    shouldClose.fire(new AllexError(signal, 'Server stopped'));
+    return;
+  }
+  shouldClose.fire();
+}
+function onExit (error) {
+  if (error) {
+    shouldClose.fire(error);
+    return;
+  }
+  shouldClose.fire();
+}
+process.on('SIGINT',onSignal);
+process.on('SIGTERM',onSignal);
+process.on('exit',onExit);
 
 var toExport = {
   jsonschema : jsonschema,
@@ -112,7 +131,8 @@ var toExport = {
   request: require('allex_httprequestlowlevellib')(objmanip.traverseShallow, checkftions.isFunction, functionmanip.dummyFunc),
   DIContainer : DIContainer,
   moduleRecognition: require('allex_modulerecognitionlowlevellib')(checkftions.isString, checkftions.isFunction, q, qlib),
-  capitalize : stringmanip.capitalize
+  capitalize : stringmanip.capitalize,
+  shouldClose : shouldClose
 };
 
 module.exports = toExport;
