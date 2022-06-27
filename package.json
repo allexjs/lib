@@ -1,6 +1,6 @@
 {
   "name": "allexlib",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "AllexJS basic library",
   "main": "index.js",
   "scripts": {
