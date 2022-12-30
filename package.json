@@ -1,6 +1,6 @@
 {
   "name": "allexlib",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "AllexJS basic library",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "allex_avltreelowlevellib": "1.x",
     "allex_checkslowlevellib": "1.x",
     "allex_deferfifolowlevellib": "1.x",
-    "allex_defermaplowlevellib": "^1.0.0",
+    "allex_defermaplowlevellib": "1.x",
     "allex_destroyablemixinslowlevellib": "2.x",
     "allex_destructionlowlevellib": "3.x",
     "allex_dicontainerlowlevellib": "2.x",
