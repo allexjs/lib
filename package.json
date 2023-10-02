@@ -1,6 +1,6 @@
 {
   "name": "allexlib",
-  "version": "3.4.0",
+  "version": "3.4.1",
   "description": "AllexJS basic library",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,7 @@
     "allex_eventemitterlowlevellib": "2.x",
     "allex_fifolowlevellib": "1.x",
     "allex_jsonizingerrorlowlevellib": "1.x",
+    "allex_jsonschemalowlevellib": "1.x",
     "allex_stringbufferlowlevellib": "1.x",
     "allex_functionmanipulationlowlevellib": "1.x",
     "allex_httprequestlowlevellib": "1.x",
