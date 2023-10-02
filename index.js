@@ -27,7 +27,8 @@ var theLib = {},
   defermap = require('allex_defermaplowlevellib')(map, q),
   qlib = require('allex_qextlowlevellib')(q, inherit.inherit, timeout.runNext, fifo, map, cleanftions.containerDestroyAll),
   listenablemap = require('allex_listenablemaplowlevellib')(map, eventemitter, inherit.inherit, timeout.runNext, checkftions.isArray, checkftions.defined, checkftions.isDefinedAndNotNull, cleanftions.containerDestroyDeep, cleanftions.arryDestroyAll),
-  DIContainer = require('allex_dicontainerlowlevellib')(map, defermap, listenablemap, q, qlib, cleanftions.containerDestroyAll);
+  DIContainer = require('allex_dicontainerlowlevellib')(map, defermap, listenablemap, q, qlib, cleanftions.containerDestroyAll),
+  JsonSchema = require('allex_jsonschemalowlevellib')(jsonschema, objmanip, AllexJSONizingError);
 
 var shouldClose = new eventemitter();
 
@@ -61,6 +62,7 @@ theLib.extendWithConcat=objmanip.extendWithConcat;
 theLib.extendShallow=objmanip.extendShallow;
 theLib.pick=objmanip.pick;
 theLib.pickExcept=objmanip.pickExcept;
+theLib.reduceShallow=objmanip.reduceShallow;
 theLib.inherit=inherit.inherit;
 theLib.inheritMethods=inherit.inheritMethods;
 theLib.isFunction=checkftions.isFunction;
@@ -140,5 +142,8 @@ theLib.shouldClose = shouldClose;
 theLib.now = now;
 theLib.pid = pid;
 theLib.exit = exit;
+theLib.jsonSchemaValidateToErrors = JsonSchema.jsonSchemaValidateToErrors;
+theLib.jsonSchemValidateToJsonizedErrorThrow = JsonSchema.jsonSchemValidateToJsonizedErrorThrow;
+theLib.allexSpecToJsonSchema = JsonSchema.allexSpecToJsonSchema;
 
 module.exports = theLib;
