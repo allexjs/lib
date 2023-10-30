@@ -26,7 +26,7 @@ var theLib = {},
   map = require('allex_maplowlevellib')(avltreelib, inherit.inherit, slist),
   defermap = require('allex_defermaplowlevellib')(map, q),
   qlib = require('allex_qextlowlevellib')(q, inherit.inherit, timeout.runNext, fifo, map, cleanftions.containerDestroyAll),
-  listenablemap = require('allex_listenablemaplowlevellib')(map, eventemitter, inherit.inherit, timeout.runNext, checkftions.isArray, checkftions.defined, checkftions.isDefinedAndNotNull, cleanftions.containerDestroyDeep, cleanftions.arryDestroyAll),
+  listenablemap = require('allex_listenablemaplowlevellib')(map, eventemitter, inherit.inherit, timeout.runNext, checkftions.isArray, checkftions.defined, checkftions.isDefinedAndNotNull, checkftions.isEqual, cleanftions.containerDestroyDeep, cleanftions.arryDestroyAll),
   DIContainer = require('allex_dicontainerlowlevellib')(map, defermap, listenablemap, q, qlib, cleanftions.containerDestroyAll),
   JsonSchema = require('allex_jsonschemalowlevellib')(jsonschema, objmanip, AllexJSONizingError);
 
