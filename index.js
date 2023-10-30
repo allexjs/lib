@@ -86,6 +86,7 @@ theLib.isArrayOfFunctions = checkftions.isArrayOfFunctions;
 theLib.isArrayOfObjectsWithProperty = checkftions.isArrayOfObjectsWithProperty;
 theLib.isArrayOfObjectsWithProperties = checkftions.isArrayOfObjectsWithProperties;
 theLib.isNonEmptyString = checkftions.isNonEmptyString;
+theLib.isNonEmptyArray = checkftions.isNonEmptyArray;
 theLib.Destroyable= destroyables.Destroyable;
 theLib.SimpleDestroyable= destroyables.SimpleDestroyable;
 theLib.ComplexDestroyable= destroyables.ComplexDestroyable;
